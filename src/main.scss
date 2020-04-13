@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+
+html, body {
+  background: url(./assets/img/weather_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: wheat;
+  font-family: 'Comfortaa' !important;
+  font-style: italic;
+  font-weight: bolder;
+}
