@@ -1,4 +1,2 @@
 import './main.scss';
-import getWeather from './dom/get-weather';
-
-getWeather();
+import './dom/get-weather';

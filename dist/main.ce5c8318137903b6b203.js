@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst apiKey = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=0e2d4c6c91fb01e7514be5f8be6d615b';\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (apiKey);\n\n//# sourceURL=webpack:///./src/dom/config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// import { cityInput } from './form-input';\n\nconst apiKey = '0e2d4c6c91fb01e7514be5f8be6d615b';\n// const apiParams = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}`;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (apiKey);\n\n\n//# sourceURL=webpack:///./src/dom/config.js?");
+
+/***/ }),
+
+/***/ "./src/dom/form-input.js":
+/*!*******************************!*\
+  !*** ./src/dom/form-input.js ***!
+  \*******************************/
+/*! exports provided: cityInput, submission */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cityInput\", function() { return cityInput; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"submission\", function() { return submission; });\nconst cityInput = document.getElementById('city-input').value;\nconst submission = document.getElementById('submit');\n\n\n\n//# sourceURL=webpack:///./src/dom/form-input.js?");
 
 /***/ }),
 
@@ -102,11 +114,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst apiKey = 'https://api.o
 /*!********************************!*\
   !*** ./src/dom/get-weather.js ***!
   \********************************/
-/*! exports provided: default */
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ \"./src/dom/config.js\");\n\n\nasync function getWeather() {\n  const response = await fetch(_config__WEBPACK_IMPORTED_MODULE_0__[\"default\"], { mode: 'cors' });\n  const weatherData = await response.json();\n  console.log(weatherData);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getWeather);\n\n//# sourceURL=webpack:///./src/dom/get-weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ \"./src/dom/config.js\");\n/* harmony import */ var _form_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-input */ \"./src/dom/form-input.js\");\n\n\n\n\nasync function getWeather(cityInput) {\n  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${_config__WEBPACK_IMPORTED_MODULE_0__[\"default\"]}`, { mode: 'cors' });\n  const weatherData = await response.json();\n  console.log(weatherData);\n}\n\n\n_form_input__WEBPACK_IMPORTED_MODULE_1__[\"submission\"].addEventListener('click', getWeather(_form_input__WEBPACK_IMPORTED_MODULE_1__[\"cityInput\"]));\n\nconsole.log('hello');\n\n//# sourceURL=webpack:///./src/dom/get-weather.js?");
 
 /***/ }),
 
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _con
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _dom_get_weather__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom/get-weather */ \"./src/dom/get-weather.js\");\n\n\n\nObject(_dom_get_weather__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _dom_get_weather__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom/get-weather */ \"./src/dom/get-weather.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
