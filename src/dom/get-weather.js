@@ -1,13 +1,13 @@
 import apiKey from './config';
 
-// const city = document.getElementById('city-input').value;
-// console.log(city);
+
 const submission = document.getElementById('submit');
 
-const city = 'Nairobi';
+// const city = 'Nairobi';
 async function getWeather() {
-  console.log(city);
   try {
+    const city = document.getElementById('city-input').value;
+    console.log(city);
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
 
     if (response.ok) {
@@ -24,4 +24,4 @@ async function getWeather() {
   }
 }
 
-submission.addEventListener('click', getWeather());
+submission.onclick = () => getWeather();
