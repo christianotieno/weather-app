@@ -12,7 +12,6 @@ html, body {
 }
 
 .container{
-  // background-color:rgba($color: #000000, $alpha: 1.0);
   display: flex;
   justify-content: center;
   height: 80vh;
@@ -21,22 +20,31 @@ html, body {
   padding: 0;
   margin: 0;
   margin: 0 auto;
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
-}
-#city-input{
-  width: 400px;
-  margin: 0;
-  padding: 0;
-  
+  #city-input{
+    text-align: center;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
 }
 #weather-map{
-  // background-color:rgba($color: #000000, $alpha: 0.3);
+  background-color:rgba($color: #000000, $alpha: 0.3);
   margin: 0;
   padding: 0;
   width: 50vw;
   height: 50vh;
   margin: 0 auto;
+  #name-country, 
+  #weather-description,
+  #temp-pres-hum,
+  #spe-deg-vis,
+  #lon-lat {
+    display: flex;
+    justify-content: space-around;
+  }
 }
+
 
