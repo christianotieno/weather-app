@@ -1,14 +1,27 @@
 import apiKey from './config';
-import { submission, cityInput } from './form-input';
 
+// const city = document.getElementById('city-input').value;
+// console.log(city);
+const submission = document.getElementById('submit');
 
-async function getWeather(cityInput) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}`, { mode: 'cors' });
-  const weatherData = await response.json();
-  console.log(weatherData);
+const city = 'Nairobi';
+async function getWeather() {
+  console.log(city);
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
+
+    if (response.ok) {
+      const weatherData = await response.json();
+      // return weatherData;
+      console.log(weatherData);
+    } if (response.status === 404) {
+      console.log(response.status);
+    } else {
+      console.log(response.status);
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-
-submission.addEventListener('click', getWeather(cityInput));
-
-console.log('hello');
+submission.addEventListener('click', getWeather());
