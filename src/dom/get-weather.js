@@ -1,27 +1,27 @@
-import apiKey from './config';
+import getWeather from './api';
 
 
-const submission = document.getElementById('submit');
+// const { name } = weatherData;
+// const weather = weatherData.weather[0].main;
+// const main = weatherData.main.temp;
+// const windSpeed = weatherData.speed;
 
-// const city = 'Nairobi';
-async function getWeather() {
-  try {
-    const city = document.getElementById('city-input').value;
-    console.log(city);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
+// const para1 = document.createElement('P'); // Create a <p> element
+// const para2 = document.createElement('P'); // Create a <p> element
+// const para3 = document.createElement('P'); // Create a <p> element
+// const para4 = document.createElement('P'); // Create a <p> element
 
-    if (response.ok) {
-      const weatherData = await response.json();
-      // return weatherData;
-      console.log(weatherData);
-    } if (response.status === 404) {
-      console.log(response.status);
-    } else {
-      console.log(response.status);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+// para1.innerText = name; // Insert text
+// para2.innerText = weather; // Insert text
+// para3.innerText = main; // Insert text
+// para4.innerText = windSpeed; // Insert text
 
-submission.onclick = () => getWeather();
+// document.getElementById('results').append(para1);
+// document.getElementById('results').append(para2);
+// document.getElementById('results').append(para3);
+// document.getElementById('results').append(para4);
+
+// console.log(name);
+// console.log(weather);
+// console.log(main);
+// console.log(windSpeed);
