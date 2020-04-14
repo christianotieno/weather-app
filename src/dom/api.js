@@ -13,8 +13,6 @@ async function getWeather() {
     if (response.ok) {
       const weatherData = await response.json();
 
-      console.log(weatherData);
-
       // return {
       //   name: weatherData,
       //   main: weatherData.weather[0],
@@ -23,6 +21,8 @@ async function getWeather() {
       //   pressure: weatherData.main,
       //   humidity: weatherData.main,
       //   speed: weatherData.wind,
+      //   deg: weatherData.wind,
+      //   visibility: weatherData,
       // };
 
       const { name } = weatherData;
@@ -35,41 +35,49 @@ async function getWeather() {
       const { speed } = weatherData.wind;
       const { deg } = weatherData.wind;
       const { visibility } = weatherData;
-      // const temp = Math.round(weatherData.main.temp);
+      const { lon } = weatherData.coord;
+      const { lat } = weatherData.coord;
 
-      // const coord = weatherData.
-      // const oorde = weatherData.lat;
+      // Create a <p> element
+      const cityName = document.createElement('P');
+      const countryName = document.createElement('P');
+      const weatherName = document.createElement('P');
+      const weatherDescription = document.createElement('P');
+      const weatherTemparature = document.createElement('P');
+      const weatherPressure = document.createElement('P');
+      const weatherHumidity = document.createElement('P');
+      const weatherWindSpeed = document.createElement('P');
+      const weatherSpeedDirection = document.createElement('P');
+      const weatherVisibility = document.createElement('P');
+      const cityLongitude = document.createElement('P');
+      const cityLatitude = document.createElement('P');
 
-      const para1 = document.createElement('P'); // Create a <p> element
-      const para2 = document.createElement('P'); // Create a <p> element
-      const para3 = document.createElement('P'); // Create a <p> element
-      const para4 = document.createElement('P'); // Create a <p> element
-      const para5 = document.createElement('P'); // Create a <p> element
-      const para6 = document.createElement('P'); // Create a <p> element
-      const para7 = document.createElement('P'); // Create a <p> element
-      const para8 = document.createElement('P'); // Create a <p> element
-      const para9 = document.createElement('P'); // Create a <p> element
+      // Insert text
+      cityName.innerText = name;
+      countryName.innerText = country;
+      weatherName.innerText = main;
+      weatherDescription.innerText = description;
+      weatherTemparature.innerText = temp;
+      weatherPressure.innerText = pressure;
+      weatherHumidity.innerText = humidity;
+      weatherWindSpeed.innerText = speed;
+      weatherSpeedDirection.innerText = deg;
+      weatherVisibility.innerText = visibility;
+      cityLongitude.innerText = lon;
+      cityLatitude.innerText = lat;
 
-      para1.innerText = name; // Insert text
-      para2.innerText = main; // Insert text
-      para3.innerText = description; // Insert text
-      para4.innerText = pressure; // Insert text
-      para5.innerText = humidity; // Insert text
-      para6.innerText = temp; // Insert text
-      para7.innerText = speed; // Insert text
-      para8.innerText = country; // Insert text
-      para9.innerText = deg; // Insert text
-
-
-      document.getElementById('results').append(para1);
-      document.getElementById('results').append(para2);
-      document.getElementById('results').append(para3);
-      document.getElementById('results').append(para4);
-      document.getElementById('results').append(para5);
-      document.getElementById('results').append(para6);
-      document.getElementById('results').append(para7);
-      document.getElementById('results').append(para8);
-      document.getElementById('results').append(para9);
+      document.getElementById('name').append(cityName);
+      document.getElementById('country').append(countryName);
+      document.getElementById('main').append(weatherName);
+      document.getElementById('description').append(weatherDescription);
+      document.getElementById('temp').append(weatherTemparature);
+      document.getElementById('pressure').append(weatherPressure);
+      document.getElementById('humidity').append(weatherHumidity);
+      document.getElementById('speed').append(weatherWindSpeed);
+      document.getElementById('deg').append(weatherSpeedDirection);
+      document.getElementById('visibility').append(weatherVisibility);
+      document.getElementById('lon').append(cityLongitude);
+      document.getElementById('lat').append(cityLatitude);
 
       console.log(name);
       console.log(country);
@@ -81,17 +89,18 @@ async function getWeather() {
       console.log(speed);
       console.log(deg);
       console.log(visibility);
+      console.log(lon);
+      console.log(lat);
     }
 
-    // if (response.status === 404) {
-    //   console.log(response.status);
-    // } else {
-    //   console.log(response.status);
-    // }
+    if (response.status === 404) {
+      console.log(response.status);
+    } else {
+      console.log(response.status);
+    }
   } catch (error) {
     console.error(error);
   }
-  // return true;
 }
 
 
