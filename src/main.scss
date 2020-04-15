@@ -11,40 +11,4 @@ html, body {
   font-weight: bolder;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  height: 80vh;
-}
-.form-section{
-  padding: 0;
-  margin: 0;
-  margin: 0 auto;
-  width: 30%;
-  display: flex;
-  justify-content: space-around;
-  #city-input{
-    text-align: center;
-    width: 200px;
-    margin: 0;
-    padding: 0;
-  }
-}
-#weather-map{
-  background-color:rgba($color: #000000, $alpha: 0.3);
-  margin: 0;
-  padding: 0;
-  width: 50vw;
-  height: 50vh;
-  margin: 0 auto;
-  #name-country, 
-  #weather-description,
-  #temp-pres-hum,
-  #spe-deg-vis,
-  #lon-lat {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
 

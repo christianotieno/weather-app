@@ -1,2 +1,2 @@
 import './main.scss';
-import './dom/api';
+import './dom/dom';
