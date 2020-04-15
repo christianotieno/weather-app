@@ -5,15 +5,15 @@ import apiKey from './config';
 const KELVIN = 273;
 const weatherDataStore = {};
 const submission = document.getElementById('submit');
-const iconElement = document.querySelector('.weather-icon');
-const locationElement = document.querySelector('.location p');
-const tempElement = document.querySelector('.temperature-value p');
-const descElement = document.querySelector('.temperature-description p');
+const iconElement = document.querySelector('#weather-icon');
+const locationElement = document.querySelector('#location p');
+const tempElement = document.querySelector('#temperature-value p');
+const descElement = document.querySelector('#temperature-description p');
 
 
 // DISPLAY WEATHER TO UI
 function displayWeather() {
-  iconElement.innerHTML = `<img src="icons/${weatherDataStore.iconId}.png"/>`;
+  iconElement.innerHTML = `<img src="../src/assets/icons/${weatherDataStore.iconId}.png"/>`;
   tempElement.innerHTML = `${weatherDataStore.temperature.value}°<span>C</span>`;
   descElement.innerHTML = weatherDataStore.description;
   locationElement.innerHTML = `${weatherDataStore.city}, ${weatherDataStore.country}`;

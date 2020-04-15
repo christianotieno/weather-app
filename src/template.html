@@ -8,17 +8,22 @@
 </head>
 <body>
   <main class="container">
+    <div id="header-container">
+      <div class="header">
+        <h1 class= "app-title">Weather App</h1> 
+      </div>
+    </div>
+    
+
     <div class="form-inline">
-      
       <div class="form-section">
         <div class="form-group mx-sm-3 mb-2">
           <input type="text" class="form-control" id="city-input" placeholder="Enter City Name: ">
+          <button type="submit" class="btn btn-primary mb-2" id="submit">Search</button>
         </div>
-        <button type="submit" class="btn btn-primary mb-2" id="submit">Search</button>
       </div>
-
       <div class="weather-map">
-        <div id="weather-icon"></div>
+        <div id="weather-icon"><img src="assets/icons/unknown.png" alt=""></div>
         <div id="temperature-value"><p>- &deg<span>C</span></p></div>
         <div id="temperature-description"><p> - </p></div>
         <div id="location"><p>-</p></div>       
