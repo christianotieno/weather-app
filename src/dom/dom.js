@@ -1,9 +1,7 @@
-import apiKey from './config';
-
-
-// VIEW VARIABLES
+// VARIABLES
 const KELVIN = 273;
 const weatherDataStore = {};
+const apiKey = '0e2d4c6c91fb01e7514be5f8be6d615b';
 const submission = document.getElementById('submit');
 const iconElement = document.querySelector('#weather-icon');
 const locationElement = document.querySelector('#location p');
