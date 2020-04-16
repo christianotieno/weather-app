@@ -57,7 +57,7 @@ npm run watch
 
 👤 **Author**
 
-- Github: [@ChristianOtieno](https://github.com/ChristianOtieno)
+- Github: [@ChristianOtieno](https://github.com/christianotieno)
 - Twitter: [@iamchrisotieno](https://twitter.com/iamchrisotieno)
 - Linkedin: [Christian Otieno](https://www.linkedin.com/in/christianotieno/)
 
