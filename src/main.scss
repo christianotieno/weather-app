@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+
+html, body {
+  background: url(./assets/img/weather-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: wheat;
+  font-family: 'Comfortaa' !important;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.container{
+  width: 800px;    
+  height: 600px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  display: block;
+  margin: 5% auto;
+  border-radius: 15px;
+  padding-bottom : 50px;
+}
+#header-container{
+  padding-top: 10px;
+}
+.header{
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 2% auto;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  .app-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.form-inline{
+  display: flex;
+  justify-content: center;
+  padding: 25px 50px 25px 50px;
+}
+.form-section{
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#city-input{
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  border-radius: 15px;
+}
+.btn {
+  margin-top: 8px;
+  margin-left: 4px;
+  height: 40px;
+  border-radius: 15px;
+}
+.weather-map{
+  padding-top: 50px;
+  width: 500px;
+  height: 360px;
+  background-color: #F4F9FF;
+  border-radius: 15px;
+}
+
+#weather-icon{
+  width: 500px;
+  height: 128px;
+}
+
+#weather-icon img{
+  display: block;
+  margin: 0 auto;
+}
+
+#temperature-value{
+  width: 500px;
+  height:60px;
+}
+
+#temperature-value p{
+  padding: 0;
+  margin: 0;
+  color: #293251;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+#temperature-value span{
+  color: #293251;
+  font-size: 0.5em;
+}
+
+#temperature-description p{
+  padding: 8px;
+  margin: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#location p{
+  margin: 0;
+  padding: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+
+
