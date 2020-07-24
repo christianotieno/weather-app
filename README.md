@@ -1,10 +1,10 @@
 # weather-app
 
-> Asynchronous JavaScript and APIs project - dynamically rendering a simple weather app using the fetch function and the openweathermap api!
+> Asynchronous JavaScript and APIs project - dynamically rendering a simple weather app using the fetch function and the OpenWeatherMap API!
 
 ![screenshot](./src/assets/img/screenshot.png)
 
-Additional description about the project and its features.
+A summary description of the project and its features illustrated below.
 
 ## Built With
 
@@ -36,7 +36,7 @@ git clone git@github.com:christianotieno/weather-app.git
 npm install
 ```
 
-> This acrion will install webpack to the node_modules directory of this project.
+> This action will install Webpack to the node_modules directory of this project.
 
 ### Run tests
 
@@ -70,11 +70,6 @@ Feel free to check the [issues page](https://github.com/ChristianOtieno/weather-
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration.
 
 ## 📝 License
 
